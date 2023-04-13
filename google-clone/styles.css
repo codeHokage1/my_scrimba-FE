@@ -1,0 +1,29 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+img {
+	width: 200px;
+	display: block;
+	margin: 50px auto 10px auto;
+}
+input {
+	display: block;
+	width: 300px;
+	margin: 10px auto 20px auto;
+	height: 24px;
+	padding: 5px 10px;
+	border-radius: 16px;
+	border: 1px solid #cfcfcf;
+}
+.btn-container {
+	display: flex;
+	justify-content: center;
+}
+button {
+	margin: 0 5px;
+	border: none;
+	border-radius: 5px;
+	background: #cfcfcf;
+	padding: 5px 10px;
+}
