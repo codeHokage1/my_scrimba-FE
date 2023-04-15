@@ -8,4 +8,6 @@ The following are the projects done:
 - My Card
   - Deployed Link: https://my-card-seven.vercel.app/
 - Birthday GIFt site
-  - Deployed Link: https://my-frontend-masters.vercel.app/
+  - Deployed Link: https://birthday-codehokage1.vercel.app/
+- Solo Project: Hometown - Lagos City
+  - Deployed Link: https://birthday-codehokage1.vercel.app/
