@@ -10,4 +10,4 @@ The following are the projects done:
 - Birthday GIFt site
   - Deployed Link: https://birthday-codehokage1.vercel.app/
 - Solo Project: Hometown - Lagos City
-  - Deployed Link: https://birthday-codehokage1.vercel.app/
+  - Deployed Link: https://lagos-city.vercel.app/
