@@ -1,0 +1,84 @@
+@font-face {
+	font-family: "Birthday";
+	src: url("./BirthdayBallon.otf");
+}
+body {
+	margin: 0;
+	text-align: center;
+	font-family: "Birthday", sans-serif;
+	letter-spacing: 1px;
+    background: linear-gradient(#70C7D6, #f3e156);
+    font-size: 22pt;
+	color: white;
+    text-shadow: 0 0 3px black;
+}
+.hero {
+	margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#birthday-boy {
+	width: 200px;
+    border-radius: 5px;
+    border: 6px solid #f3e156;
+}
+.hero > h1 {
+	font-size: 36pt;
+}
+.hero > h2 {
+	font-size: 26pt;
+	margin: 10px 0 10px 0;
+}
+.hero > h4 {
+	font-size: 18pt;
+	margin: 0;
+}
+#age, #date{
+    background-color: #f3e156;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+#gift1-title{
+    margin: 0;
+}
+#hint{
+    margin: 0;
+}
+.gift-item{
+    width: 500px;
+    height: 400px;
+    border-radius: 5px;
+    border: 6px solid #f3e156;
+    margin: 10px auto 50px;
+    background-image: url("https://img.freepik.com/premium-photo/blank-gift-greeting-card-generative-ai_786587-5184.jpg?w=2000");
+    background-size: cover;
+    background-position: center;
+}
+.gift-item:hover{
+    box-shadow: 15px 15px white;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+    cursor: pointer;
+}
+#happy:hover{
+    background-image: url("https://media.giphy.com/media/3o7abldj0b3rxrZUxW/giphy.gif");
+}
+#amazing:hover{
+    background-image: url("https://media.giphy.com/media/EYV3omA24nJWzbwyp1/giphy.gif");
+}
+#loved:hover{
+    background-image: url("https://media.giphy.com/media/pHWPwKkObvU3tlHGBv/giphy.gif");
+}
+#love-you:hover{
+    background-image: url("https://media.giphy.com/media/xYGnFm4mVcMxYIVq3v/giphy.gif");
+}
+footer > p{
+    font-size: 18pt;
+}
+footer a{
+    color: #70C7D6;
+}
+footer a:hover{
+    color: white;
+}
