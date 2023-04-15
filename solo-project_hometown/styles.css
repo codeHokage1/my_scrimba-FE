@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+}
+@font-face {
+	font-family: "Abril";
+	src: url("./AbrilFatface-Regular.ttf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+body {
+	margin: 0;
+   font-family: 'Chivo Mono', monospace;
+}
+.hero {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("./images/hero-lagos.jpg");
+   background-size: cover;
+	background-position: center;
+	height: 98vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+   text-align: center;
+   margin: 0;
+   border-bottom: 10px solid skyblue;
+}
+.hero > h1 {
+	/* font-family: "Abril", cursive; */
+   font-size: 50pt;
+   margin-bottom: 50px;
+   /* letter-spacing: 5px; */
+   color: wheat;
+   text-shadow: 0 0 5px black;
+}
+#lagos{
+   /* background: skyblue; */
+   border-bottom: 7px solid skyblue;
+   padding: 3px 5px;
+   border-radius: 5px;
+}
+.hero > h3{
+   font-size: 24pt;
+   color: white;
+   text-shadow: 0 0 4px black;
+   margin: 20px 0 10px;
+}
+#theme{
+   background-color: wheat;
+   padding: 0 10px;
+   border-radius: 5px;
+}
+.hero > p {
+   font-size: 18pt;
+   color: white;
+   text-shadow: 0 0 5px black;
+   margin: 20px;
+   font-style: italic;
+   margin: 0;
+}
+
+.activities {
+   /* background-color: rgb(173, 221, 240); */
+   background-color: wheat;
+   padding: 50px 0;
+   text-align: center;
+   margin: 0;
+}
+.activities > h4{
+   font-size: 24pt;
+   text-shadow: 0 0 1px black;
+   margin-bottom: 50px;
+}
+.activities-container{
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.activity{
+   /* border: 1px solid black; */
+   width: 300px;
+   padding: 20px;
+}
+.activity img{
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   margin-bottom: 20px;
+}
+.activity > h5{
+   font-size: 18pt;
+   margin-bottom: 10px;
+   color: skyblue;
+   text-shadow: 0 0 1px black;
+   letter-spacing: 2px;
+}
