@@ -64,6 +64,7 @@ body {
    padding: 50px 0;
    text-align: center;
    margin: 0;
+   /* border-bottom: 10px solid skyblue; */
 }
 .activities > h4{
    font-size: 24pt;
@@ -77,9 +78,10 @@ body {
    align-items: center;
 }
 .activity{
-   /* border: 1px solid black; */
    width: 300px;
    padding: 20px;
+   height: 500px;
+   margin: 0 auto 10px;
 }
 .activity img{
    width: 150px;
@@ -88,9 +90,99 @@ body {
    margin-bottom: 20px;
 }
 .activity > h5{
-   font-size: 18pt;
+   font-size: 22pt;
    margin-bottom: 10px;
-   color: skyblue;
-   text-shadow: 0 0 1px black;
    letter-spacing: 2px;
+   font-weight: bold;
+}
+.activity a{
+   border-bottom: 2px solid white;
+   text-decoration: none;
+   color: black;
+}
+.activity a:hover{
+   border-bottom: 2px solid skyblue;
+   transition: 0.5s;
+}
+
+.escape{
+   background: url('./images/escape-lagos.jpg');
+   background-size: cover;
+   background-position: center;
+   width: 100%;
+   height: 40vh;
+   border-bottom: 10px solid skyblue;
+}
+
+.guide{
+   /* background-color: rgb(224, 241, 247); */
+   background-image: url("./images/busy-lagos.jpg");
+   background-size: cover;
+   
+   padding: 50px;
+}
+.guide-container{
+   display: block;
+   margin: 0 auto;
+   padding: 30px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   background-color: wheat;
+   width: 50%;
+}
+#guide-farhan{
+   box-shadow: 10px 10px skyblue;
+   border: 3px solid skyblue;
+}
+#guide-farhan:hover{
+   box-shadow: 20px 20px skyblue;
+   transition: 1s;
+   cursor: pointer;
+}
+.guide-details{
+   width: 50%;
+   padding: 20px;
+   text-align: center;
+}
+.guide-details > h3{
+   font-size: 24pt;
+   margin-bottom: 10px;
+   text-shadow: 0 0 1px black;
+}
+#person{
+   font-size: 18pt;
+   margin-top: 40px;
+   text-shadow: 0 0 1px black;
+}
+.socials{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.socials img{
+   width: 50px;
+   height: 50px;
+   margin: 20px 5px;
+}
+.socials img:hover{
+  scale: 1.5;
+  transition: 0.5s;
+}
+
+footer{
+   background-color: skyblue;
+   padding: 20px;
+   text-align: center;
+   color: white;
+   font-size: 12pt;
+   font-weight: bold;
+}
+footer a {
+   color: wheat;
+   text-shadow: 0 0 2px black;
+}
+footer a:hover{
+   color: black;
+   text-shadow: 0 0 2px wheat;
 }
