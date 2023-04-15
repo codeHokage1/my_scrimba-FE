@@ -7,3 +7,5 @@ The following are the projects done:
 - Google Clone
 - My Card
   - Deployed Link: https://my-card-seven.vercel.app/
+- Birthday GIFt site
+  - Deployed Link: https://my-frontend-masters.vercel.app/
