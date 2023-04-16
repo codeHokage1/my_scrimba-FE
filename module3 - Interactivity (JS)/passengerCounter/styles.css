@@ -1,0 +1,48 @@
+body{
+   background: url("https://images.unsplash.com/photo-1495313196544-7d1adf4e628f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   font-family: 'Courier New', Courier, monospace;
+   text-align: center;
+}
+.counter{
+   background-color: aliceblue;
+   max-width: 70%;
+   margin: 0 auto;
+   padding: 50px;
+   border: 5px solid wheat;
+   border-radius: 10px;
+}
+h2{
+   font-size: 20pt;
+}
+button{
+   border: none;
+   padding: 5px 10px;
+   font-family: inherit;
+   font-size: 12pt;
+   font-weight: bold;
+   cursor: pointer;
+   border-radius: 5px;
+   display: block;
+   margin: 0 auto 10px;
+   width: 150px;
+}
+button:hover{
+   box-shadow: 5px 5px skyblue;
+}
+#increase{
+   background-color: rgb(117, 237, 117);
+}
+#save{
+   background-color: wheat;
+}
+
+p{
+   font-weight: bold;
+}
