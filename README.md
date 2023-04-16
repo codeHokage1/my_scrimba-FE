@@ -15,4 +15,4 @@ The following are the projects done:
   
 ### Module 3 - Making websites interactive (JavaScript)
 - Passenger Counter
-  - 
+  - Deployed Link: https://main--shiny-scone-1e4d2f.netlify.app/
