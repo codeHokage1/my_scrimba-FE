@@ -14,3 +14,5 @@ The following are the projects done:
   - Deployed Link: https://lagos-city.vercel.app/
   
 ### Module 3 - Making websites interactive (JavaScript)
+- Passenger Counter
+  - 
