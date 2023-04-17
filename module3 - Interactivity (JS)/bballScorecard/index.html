@@ -14,50 +14,51 @@
       </header>
 
       <section class="timer-container">
-         <h2><span id="time">60.00</span> mins</h2>
-         <button id="start-btn">Start</button>
+         <h2><span id="time"><span id="minutes">60</span>:<span id="seconds">00</span></span> mins</h2>
+         <button id="start-btn" onclick="countDown()">Start</button>
       </section>
 
       <section class="scores">
          <div class="home">
             <h2 class="tag">HOME</h2>
             <h2 id="home-score">
-               10
+               00
             </h2>
             <div id="home-btns">
-               <button id="home-1" class="score-btn">+1</button>
-               <button id="home-2" class="score-btn">+2</button>
-               <button id="home-3" class="score-btn">+3</button>
+               <button id="home-1" class="score-btn" onclick="addScore('home', 1)">+1</button>
+               <button id="home-2" class="score-btn" onclick="addScore('home', 2)">+2</button>
+               <button id="home-3" class="score-btn" onclick="addScore('home', 3)">+3</button>
             </div>
             <div id="home-fouls-container">
-               <h3>Fouls: <span id="home-fouls">5</span></h3>
-               <button id="home-foul-btn">Foul!</button>
+               <h3>Fouls left: <span id="home-fouls">5</span></h3>
+               <button id="home-foul-btn" onclick="addFoul('home')">Foul!</button>
             </div>
          </div>
 
          <div class="guest">
             <h2 class="tag">GUEST</h2>
             <h2 id="guest-score">
-               10
+               00
             </h2>
             <div id="guest-btns">
-               <button id="guest-1" class="score-btn">+1</button>
-               <button id="guest-2" class="score-btn">+2</button>
-               <button id="guest-3" class="score-btn">+3</button>
+               <button id="guest-1" class="score-btn" onclick="addScore('guest', 1)">+1</button>
+               <button id="guest-2" class="score-btn" onclick="addScore('guest', 2)">+2</button>
+               <button id="guest-3" class="score-btn" onclick="addScore('guest', 3)">+3</button>
             </div>
             <div id="guest-fouls-container">
-               <h3>Fouls: <span id="guest-fouls">5</span></h3>
-               <button id="guest-foul-btn">Foul!</button>
+               <h3>Fouls left: <span id="guest-fouls">5</span></h3>
+               <button id="guest-foul-btn" onclick="addFoul('guest')">Foul!</button>
             </div>
          </div>
       </section>
 
       <div class="new-game">
-         <button id="new-game-btn">
+         <button id="new-game-btn" onclick="newGame()">
             New Game
          </button>
       </div>
    </main>
    
+   <script src="./index.js"></script>
 </body>
 </html>
