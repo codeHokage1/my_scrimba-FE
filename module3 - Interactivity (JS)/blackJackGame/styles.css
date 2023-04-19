@@ -28,8 +28,8 @@ h1{
 }
 
 h2{
-   font-size: 16pt;
-   color: white;
+   font-size: 18pt;
+   color: black;
    margin-bottom: 20px;
    font-style: italic;
 }
@@ -63,4 +63,10 @@ button:hover{
 
 #player{
    margin: 20px;
+}
+
+#error{
+   color: rgb(234, 73, 73);
+   font-size: 14pt;
+   text-shadow: 0 0 3px black;
 }
