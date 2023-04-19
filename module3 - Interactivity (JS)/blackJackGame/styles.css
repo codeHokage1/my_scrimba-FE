@@ -1,0 +1,66 @@
+*{
+   margin: 0;
+}
+body{
+   background: url("https://media.istockphoto.com/id/476618574/vector/dark-seamless-vector-background-with-3d-effect.jpg?s=612x612&w=0&k=20&c=GohZJncDSs7doRQVtFkmnsrmHv7HiTolsD9hx8AVg1Y=");
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Courier New', Courier, monospace;
+   height: 100vh;
+}
+main{
+   background: url("https://media.istockphoto.com/id/1125958849/photo/cards-on-green-felt-casino-table-background.jpg?s=612x612&w=0&k=20&c=zEOnjWRU-dxoThl6qIC1hBhkde2iumsjkWZ6ITMyWWQ=");
+   background-size: cover;
+   width: 40%;
+   padding: 60px;
+   text-align: center;
+}
+
+h1{
+   text-transform: uppercase;
+   font-weight: 900;
+   color: goldenrod;
+   margin: 80px 0 20px;
+   font-size: 28pt;
+   text-shadow: 0 0 3px black;
+}
+
+h2{
+   font-size: 16pt;
+   color: white;
+   margin-bottom: 20px;
+   font-style: italic;
+}
+
+p{
+   font-size: 16pt;
+   color: white;
+   margin-bottom: 10px;
+   font-weight: bold;
+}
+button{
+   display: block;
+   margin: 0 auto;
+   width: 150px;
+   font-family: inherit;
+   font-size: 14pt;
+   font-weight: bold;
+   color: white;
+   background-color: goldenrod;
+   border: none;
+   padding: 5px 10px;
+   border-radius: 3px;
+   margin-bottom: 10px;
+   cursor: pointer;
+   text-shadow: 0 0 2px black;
+}
+button:hover{
+   box-shadow: 5px 5px white;
+   transition: 0.5s;
+}
+
+#player{
+   margin: 20px;
+}
