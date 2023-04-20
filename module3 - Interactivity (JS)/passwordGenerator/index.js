@@ -76,7 +76,7 @@ clipBoard1.addEventListener("click", () => {
 		setTimeout(() => {
 			copyInfo1.textContent = "";
 			copyInfo1.classList.remove("copy-info-error");
-		}, 5000);
+		}, 3000);
 		return;
 	}
 	const textarea = document.createElement("textarea");
@@ -104,7 +104,7 @@ clipBoard2.addEventListener("click", () => {
 		setTimeout(() => {
 			copyInfo2.textContent = "";
 			copyInfo2.classList.remove("copy-info-error");
-		}, 5000);
+		}, 3000);
 		return;
 	}
 	const textarea = document.createElement("textarea");
