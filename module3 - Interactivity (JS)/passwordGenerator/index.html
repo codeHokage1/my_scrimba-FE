@@ -16,8 +16,11 @@
          <p id="advanced-option">Advance options <span style="font-size: 10pt;">⛛</span></p>
          <div class="hidden" id="options">
             <div class="option-row">
-               <p>Length:</p>
-               <input type="number" id="password-length">
+               <div class="option-input">
+                  <p>Length:</p>
+                  <input type="number" id="password-length">
+               </div>
+               <p id="error"></p>
             </div>
          </div>
       </div>
@@ -25,11 +28,28 @@
 
 
       <div id="passwords">
-         <div id="password1">
-            1233
+         <div class="row-and-info">
+            <div class="password-row">
+               <div id="password1">
+      
+               </div>
+               <p class="clipboard" id="clipboard1">
+                  📋
+               </p>
+            </div>
+            <p id="copy-info1"></p>
          </div>
-         <div id="password2">
-            1233
+
+         <div class="row-and-info">
+            <div class="password-row">
+               <div id="password2">
+      
+               </div>
+               <p class="clipboard" id="clipboard2">
+                  📋
+               </p>
+            </div>
+            <p id="copy-info2"></p>
          </div>
       </div>
    </main>

@@ -68,13 +68,24 @@ h1{
 }
 .option-row{
    display: flex;
-   align-items: center;
+   flex-direction: column;
+   justify-content: center;
    margin-bottom: 10px;
+}
+.option-input{
+   display: flex;
+   align-items: center;
 }
 #password-length{
    margin-left: 20px;
    font-family: 'Courier New', Courier, monospace;
    font-weight: bold;
+}
+#error{
+   color: red;
+   font-size: 10pt;
+   margin-bottom: 10px;
+   
 }
 
 
@@ -89,10 +100,25 @@ h1{
 #password1, #password2{
    background-color: #273549;
    padding: 7px 15px;
-   /* width: 150px; */
+   width: 170px;
+   height: 20px;
    color: #5DEF92;
    font-family: 'Courier New', Courier, monospace;
    font-size: 14pt;
    font-weight: bold;
    border-radius: 5px;
+}
+.password-row{
+   display: flex;
+   align-items: center;
+}
+.clipboard{
+   font-size: 18pt;
+   cursor: pointer;
+   background-color: #5DEF92;
+   margin-left: 5px;
+   border-radius: 3px;
+}
+.clipboard:hover{
+   background-color: #6B7280;
 }
