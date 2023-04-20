@@ -1,0 +1,65 @@
+*{
+   margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+body{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   font-family: 'Karla', sans-serif;
+   background-color: #1C1C1C;
+}
+main{
+   background-color: #ECFDF5;
+   width: 40%;
+   padding: 50px;
+}
+h1{
+   color: #2B283A;
+   margin-bottom: 10px;
+   font-size: 24pt;
+   /* text-shadow: 0 0 1px black; */
+}
+#highlight{
+   color: #10B981;
+   display: block;
+}
+p{
+   color: #6B7280;
+   margin-bottom: 30px;
+   font-size: 14pt;
+}
+#generate-password{
+   border: none;
+   background-color: #10B981;
+   color: white;
+   font-family: inherit;
+   font-size: 12pt;
+   padding: 5px 10px;
+   cursor: pointer;
+   border-radius: 5px;
+   margin-bottom: 30px;
+}
+#generate-password:hover{
+   background-color: #059669;
+}
+
+#passwords{
+   border-top: 3px solid #D5D4D8;
+   padding-top: 30px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+#password1, #password2{
+   background-color: #273549;
+   padding: 7px 15px;
+   /* width: 150px; */
+   color: #5DEF92;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 14pt;
+   font-weight: bold;
+   border-radius: 5px;
+}
