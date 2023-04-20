@@ -19,7 +19,7 @@ main{
 h1{
    color: #2B283A;
    margin-bottom: 10px;
-   font-size: 24pt;
+   font-size: 28pt;
    /* text-shadow: 0 0 1px black; */
 }
 #highlight{
@@ -41,6 +41,7 @@ h1{
    cursor: pointer;
    border-radius: 5px;
    margin-bottom: 30px;
+   margin-top: 20px;
 }
 #generate-password:hover{
    background-color: #059669;
@@ -85,7 +86,16 @@ h1{
    color: red;
    font-size: 10pt;
    margin-bottom: 10px;
-   
+}
+#add-numbers, #add-symbols{
+   margin-left: 30px;
+   cursor: pointer;
+   width: 50px;
+}
+#advanced-info{
+   color: #6B7280;
+   font-size: 10pt;
+   font-style: italic;
 }
 
 
@@ -121,4 +131,7 @@ h1{
 }
 .clipboard:hover{
    background-color: #6B7280;
+}
+.copy-info-error{
+   color: red;
 }
