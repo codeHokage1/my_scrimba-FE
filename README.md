@@ -17,6 +17,8 @@ The following are the projects done:
 - Passenger Counter
   - Deployed Link: https://main--shiny-scone-1e4d2f.netlify.app/
 - Basketball Score board
-  - Deployed Link: https://eloquent-jalebi-8ab5b0.netlify.app/
+  - Deployed Link: https://scoreboard-bbball.netlify.app/
 - Black Jack Game
-  - Deployed Link: https://starlit-chebakia-05d439.netlify.app/
+  - Deployed Link: https://black-jaack.netlify.app/
+- Password Generator:
+  - Deployed Link: https://safeandstrong.netlify.app/
