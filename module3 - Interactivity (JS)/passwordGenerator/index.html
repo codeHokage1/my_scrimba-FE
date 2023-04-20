@@ -10,9 +10,20 @@
 <body>
    <main>
       <h1>Generate a <span id="highlight">random password</span></h1>
-      <p>Never use an insercure password again.</p>
-
+      <p id="theme">Never use an insercure password again.</p>
+      
+      <div id="advanced">
+         <p id="advanced-option">Advance options <span style="font-size: 10pt;">⛛</span></p>
+         <div class="hidden" id="options">
+            <div class="option-row">
+               <p>Length:</p>
+               <input type="number" id="password-length">
+            </div>
+         </div>
+      </div>
       <button id="generate-password">Generate passwords</button>
+
+
       <div id="passwords">
          <div id="password1">
             1233
