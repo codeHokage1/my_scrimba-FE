@@ -1,0 +1,40 @@
+body{
+   padding: 20px;
+   min-width: 400px;
+   font-family: 'Courier New', Courier, monospace;
+}
+#url-input{
+   padding: 5px 10px;
+   font-size: 14pt;
+   width: 100%;
+   box-sizing: border-box;
+   margin-bottom: 10px;
+   font-family: inherit;
+   font-weight: bold;
+}
+#save-input{
+   font-family: inherit;
+   font-weight: bold;
+   background-color: blanchedalmond;
+   border: none;
+   padding: 5px 10px;
+   font-size: 14pt;
+   cursor: pointer;
+   border-radius: 5px;
+   box-shadow: 0 0 2px black;
+}
+#save-input:hover{
+   background-color: rgb(239, 161, 66);
+}
+
+#saved-items{
+   list-style: none;
+   padding: 0;
+   margin-top: 30px;
+}
+li{
+   margin-bottom: 5px;
+   font-size: 14pt;
+   font-weight: bold;
+   color: rgb(211, 122, 14);
+}
