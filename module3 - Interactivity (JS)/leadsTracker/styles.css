@@ -10,18 +10,34 @@ body{
    box-sizing: border-box;
    margin-bottom: 10px;
    font-family: inherit;
-   font-weight: bold;
+   font-weight: 500;
+   border: 2px solid rgb(211, 122, 14);
 }
-#save-input{
+#info{
+   color: rgb(211, 122, 14);
+   margin-bottom: 10px;
+   font-weight: bold;
+   font-size: 14pt;
+}
+button{
    font-family: inherit;
    font-weight: bold;
-   background-color: blanchedalmond;
    border: none;
-   padding: 5px 10px;
+   padding: 7px 14px;
    font-size: 14pt;
    cursor: pointer;
    border-radius: 5px;
-   box-shadow: 0 0 2px black;
+   box-shadow: 0 0 1px black;
+}
+#save-input{
+   background-color: blanchedalmond;
+}
+#delete{
+   background-color: transparent;
+   border: 1px solid rgb(211, 122, 14);
+}
+#delete:hover{
+   background-color: rgb(239, 161, 66);
 }
 #save-input:hover{
    background-color: rgb(239, 161, 66);
@@ -36,5 +52,8 @@ li{
    margin-bottom: 5px;
    font-size: 14pt;
    font-weight: bold;
+   color: rgb(211, 122, 14);
+}
+a{
    color: rgb(211, 122, 14);
 }
