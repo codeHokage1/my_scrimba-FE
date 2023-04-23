@@ -1,5 +1,6 @@
 const urlInput = document.getElementById('url-input');
 const saveInputBtn = document.getElementById('save-input');
+const saveTabBtn = document.getElementById('save-tab');
 const deleteBtn = document.getElementById('delete');
 
 const inputInfo = document.getElementById('info');
@@ -50,4 +51,12 @@ const deleteUrls = () => {
 
 
 saveInputBtn.addEventListener('click', saveInput);
+saveTabBtn.addEventListener('click', () => {
+   chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+      urls.push(tabs[0].url);
+      renderSavedItems();
+      saveToLocalStorage();
+   });
+});
 deleteBtn.addEventListener('click', deleteUrls);
+
