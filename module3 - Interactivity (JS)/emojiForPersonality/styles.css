@@ -1,0 +1,60 @@
+body {
+   margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: "Courier New", Courier, monospace;
+	background: linear-gradient(grey, white);
+	text-align: center;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+	font-size: 26pt;
+}
+#entry {
+	padding: 10px 15px;
+	font-size: 16pt;
+	font-family: inherit;
+	width: 100%;
+	border-radius: 5px;
+	outline: 0;
+	border: 0;
+	margin-bottom: 20px;
+}
+#emoji-container{
+   margin-bottom: 30px;
+}
+span{
+   font-size: 32pt;
+   margin-right: 10px;
+}
+.button-containers {
+	margin: 10px 0 20px 0;
+}
+button {
+	padding: 10px 15px;
+	font-size: 14pt;
+	font-family: inherit;
+	border-radius: 5px;
+	outline: 0;
+	border: 0;
+	margin: 0 10px;
+	cursor: pointer;
+	font-weight: bold;
+}
+.add button {
+	background: #18e118;
+}
+.delete button {
+	background: #e45252;
+}
+button:hover{
+   box-shadow: 2px 2px 2px 2px #888888;
+}
