@@ -22,3 +22,5 @@ The following are the projects done:
   - Deployed Link: https://black-jaack.netlify.app/
 - Password Generator:
   - Deployed Link: https://safeandstrong.netlify.app/
+- Leads Tracker (Chrome Extension)
+- 
