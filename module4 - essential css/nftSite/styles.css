@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+	margin: 0;
+   font-family: 'Roboto', sans-serif;
+}
+/* color: #d0aaff;
+   color: whitesmoke; */
+header {
+	background-color: #5f29a3;
+	padding: 30px 100px;
+}
+
+header h1 {
+	font-size: 30pt;
+	margin: 0;
+	color: whitesmoke;
+	margin-bottom: 15px;
+}
+header h3 {
+	font-size: 14pt;
+	margin: 0;
+	color: #d0aaff;
+}
+
+h2{
+   margin: 0;
+}
+section{
+   padding: 50px 100px;
+   /* width: 900px; */
+   margin: 0 auto;
+   color: #2b283a;
+}
+section h2{
+   font-size: 20pt;
+   margin-bottom: 30px;
+}
+section img{
+   width: 100%;
+   /* height: auto; */
+}
+section p{
+   font-size: 14pt;
+   line-height: 1.5;
+}
+a{
+   color: #ef5839;
+   text-decoration: none;
+}
+a:hover{
+   color: #d4b44c;
+}
+
+.section2{
+	background-color: #5f29a3;
+   color: whitesmoke;
+}
+.image-container{
+   display: flex;
+   justify-content: space-between;
+}
+.image-container img{
+   width: 500px;
+   min-width: 150px;
+   border-radius: 10px;
+}
+.link{
+   padding: 10px 19px;
+   border-radius: 4.6px;
+   font-weight: bold;
+   display: inline-block;
+   margin: 0;
+}
+.buy{
+   background-color: #5f29a3;
+   color: whitesmoke;
+}
+.info, .contact{
+   background-color: #f0e0ff;
+   color: #5f29a3;
+}
+.about{
+   background-color: whitesmoke;
+   color: #5f29a3;
+}
+.link:hover{
+   background-color: #f3e885;
+   color: #2b283a;
+}
+
+footer{
+   font-size: 14pt;
+   color: #5f29a3;
+   text-align: center;
+}

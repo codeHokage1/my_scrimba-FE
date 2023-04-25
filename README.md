@@ -23,4 +23,5 @@ The following are the projects done:
 - Password Generator:
   - Deployed Link: https://safeandstrong.netlify.app/
 - Leads Tracker (Chrome Extension)
-- 
+- Units Converter
+- Emoji Personality
