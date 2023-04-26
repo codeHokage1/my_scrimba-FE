@@ -60,6 +60,10 @@ nav{
 .post-actions img{
     width: 25px;
     margin: 15px 15px 10px 0;
+    cursor: pointer;
+}
+.post-actions img:hover{
+    opacity: 0.5;
 }
 .likes{
     margin: 0 10px;

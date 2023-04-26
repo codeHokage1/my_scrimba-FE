@@ -32,6 +32,7 @@ const posts = [
 ];
 
 const renderPosts = () => {
+    allPosts.innerHTML = "";
 	for (let post of posts) {
 		let newPost = `
         <section class="post">
@@ -48,7 +49,7 @@ const renderPosts = () => {
 				class="post-image"
 			/>
 			<div class="post-actions">
-				<img src="images/icon-heart.png" alt="heart icon" />
+				<img class="like-btn" src="images/icon-heart.png" alt="heart icon" id="post-${posts.indexOf(post)}"/>
 				<img src="images/icon-comment.png" alt="comment icon" />
 				<img src="images/icon-dm.png" alt="share icon" />
 			</div>
@@ -64,3 +65,14 @@ const renderPosts = () => {
 };
 
 renderPosts();
+
+const likeBtn = document.querySelector(".like-btn");
+
+const like = (event) => {
+    let postIndex = event.target.id.split('-')[1];
+    // console.log(event.target.id);
+    posts[postIndex].likes += 1;
+    renderPosts();
+};
+
+likeBtn.addEventListener("click", like);
