@@ -66,13 +66,14 @@ const renderPosts = () => {
 
 renderPosts();
 
-const likeBtn = document.querySelector(".like-btn");
-
 const like = (event) => {
-    let postIndex = event.target.id.split('-')[1];
-    // console.log(event.target.id);
-    posts[postIndex].likes += 1;
-    renderPosts();
+	let postIndex = event.target.id.split('-')[1];
+	console.log(postIndex);
+   posts[postIndex].likes += 1;
+   renderPosts();
 };
 
-likeBtn.addEventListener("click", like);
+const likeBtns = document.querySelectorAll(".like-btn");
+likeBtns.forEach(btn => {
+	btn.addEventListener("click", like)
+})
