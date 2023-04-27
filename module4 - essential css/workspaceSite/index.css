@@ -17,6 +17,9 @@ nav ul {
 	margin: 0;
 	padding: 0;
 }
+nav ul li{
+    cursor: pointer;
+}
 .logo {
 	font-size: 24pt;
 	font-weight: bold;
@@ -24,6 +27,12 @@ nav ul {
 .icon {
 	width: 50px;
 	margin-left: 10px;
+}
+.menu-icon{
+    margin-left: auto;
+}
+.hamburger {
+    width: 50px;
 }
 
 h1 {
