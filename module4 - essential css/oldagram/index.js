@@ -32,7 +32,7 @@ const posts = [
 ];
 
 const renderPosts = () => {
-    allPosts.innerHTML = "";
+	allPosts.innerHTML = "";
 	for (let post of posts) {
 		let newPost = `
         <section class="post">
@@ -49,7 +49,9 @@ const renderPosts = () => {
 				class="post-image"
 			/>
 			<div class="post-actions">
-				<img class="like-btn" src="images/icon-heart.png" alt="heart icon" id="post-${posts.indexOf(post)}"/>
+				<img class="like-btn" src="${post.liked ? "https://img.icons8.com/emoji/512/heart-suit.png" : "images/icon-heart.png"}" alt="heart icon" id="post-${posts.indexOf(
+					post
+				)}"/>
 				<img src="images/icon-comment.png" alt="comment icon" />
 				<img src="images/icon-dm.png" alt="share icon" />
 			</div>
@@ -60,20 +62,29 @@ const renderPosts = () => {
 				<span class="user-caption">${post.username}</span> j${post.comment}
 		</section>
         `;
-        allPosts.innerHTML += newPost;
+		allPosts.innerHTML += newPost;
 	}
+	listenForLikes();
 };
 
-renderPosts();
+// renderPosts();
+document.addEventListener("DOMContentLoaded", renderPosts);
 
-const like = (event) => {
-	let postIndex = event.target.id.split('-')[1];
-	console.log(postIndex);
-   posts[postIndex].likes += 1;
-   renderPosts();
-};
+function listenForLikes() {
+	const like = (event) => {
+		let postIndex = event.target.id.split("-")[1];
+		if (!posts[postIndex].liked) {
+			posts[postIndex].likes += 1;
+			posts[postIndex].liked = true;
+		} else {
+			posts[postIndex].likes -= 1;
+			posts[postIndex].liked = false;
+		}
+		renderPosts();
+	};
 
-const likeBtns = document.querySelectorAll(".like-btn");
-likeBtns.forEach(btn => {
-	btn.addEventListener("click", like)
-})
+	const likeBtns = document.querySelectorAll(".like-btn");
+	likeBtns.forEach((btn) => {
+		btn.addEventListener("click", like);
+	});
+}
