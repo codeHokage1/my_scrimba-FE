@@ -33,3 +33,4 @@ The following are the projects done:
 - NFT Site
 - Oldgram
   - Deployed Link: https://oldagram-farhan.netlify.app/
+- Co-working Space Site
