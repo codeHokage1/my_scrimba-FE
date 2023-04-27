@@ -47,6 +47,7 @@ const renderPosts = () => {
 				src="${post.post}"
 				alt="painting of ${post.name}"
 				class="post-image"
+				id="post-${posts.indexOf(post)}"
 			/>
 			<div class="post-actions">
 				<img class="like-btn" src="${post.liked ? "https://img.icons8.com/emoji/512/heart-suit.png" : "images/icon-heart.png"}" alt="heart icon" id="post-${posts.indexOf(
@@ -84,6 +85,12 @@ function listenForLikes() {
 	};
 
 	const likeBtns = document.querySelectorAll(".like-btn");
+	const postImages = document.querySelectorAll(".post-image");
+
+	postImages.forEach(post => {
+		post.addEventListener("dblclick", like)
+	})
+
 	likeBtns.forEach((btn) => {
 		btn.addEventListener("click", like);
 	});
