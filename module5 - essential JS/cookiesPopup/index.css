@@ -103,6 +103,9 @@ main{
   border: 1px solid transparent;
   color: whitesmoke;
 }
+.reverse{
+    flex-direction: row-reverse;
+}
 
 .modal-close-btn:hover,
 .modal-close-btn:active{
@@ -141,7 +144,7 @@ input{
 /* modal after submit */
 
 .loading{
-    width: 100%; 
+    width: 40px;
     margin-top: 10px;
 }
 
@@ -154,3 +157,4 @@ input{
     line-height: 23px;
     margin-bottom: 0;
 }
+
