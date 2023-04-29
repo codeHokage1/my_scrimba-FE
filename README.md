@@ -34,3 +34,7 @@ The following are the projects done:
 - Oldgram
   - Deployed Link: https://oldagram-farhan.netlify.app/
 - Co-working Space Site
+
+### Module 5 - Essential JS Concepts
+
+- Cookie Consent project
