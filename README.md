@@ -38,3 +38,4 @@ The following are the projects done:
 ### Module 5 - Essential JS Concepts
 
 - Cookie Consent project
+  - followed my own logic; built entirely from scratch
