@@ -16,6 +16,9 @@ i{
     font-size: 15px;
     cursor: pointer;
 }
+.fa-solid{
+    color: #999;
+}
 
 .liked{
     color: red;

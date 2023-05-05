@@ -5,15 +5,29 @@ const tweetInput = document.querySelector("#tweet-input");
 
 const feed = document.querySelector("#feed");
 
-tweetBtn.addEventListener("click", () => {
-	window.alert(tweetInput.value);
-	tweetInput.value = "";
-});
+
+document.addEventListener("click", performEvent);
+tweetBtn.addEventListener("click", addTweet);
 
 const renderTweet = (tweets) => {
 	feed.innerHTML = "";
-
-	tweets.forEach((tweet) => {
+    tweets.forEach((tweet) => {
+        let repliesHtml = ``;
+        if (tweet.replies.length) {
+            tweet.replies.forEach((reply) => {
+                repliesHtml += `
+                    <div class="tweet-reply">
+                        <div class="tweet-inner">
+                            <img src="${reply.profilePic}" class="profile-pic">
+                            <div>
+                                <p class="handle">${reply.handle}</p>
+                                <p class="tweet-text">${reply.tweetText}</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            })
+        }        
 		feed.innerHTML += `
                 <div class="tweet" id="${tweet.uuid}">
                     <div class="tweet-inner">
@@ -23,20 +37,90 @@ const renderTweet = (tweets) => {
                             <p class="tweet-text">${tweet.tweetText}</p>
                             <div class="tweet-details">
                                 <span class="tweet-detail">
+                                    <i class="fa-regular fa-comment-dots" data-comment-for="${
+																			tweet.uuid
+																		}"></i>
                                     ${tweet.replies.length}
                                 </span>
                                 <span class="tweet-detail">
+                                    <i class="fa-solid fa-heart like-tweet ${
+																			tweet.isLiked ? "liked" : null
+																		}" data-like-for="${tweet.uuid}"></i>
                                     ${tweet.likes}
                                 </span>
                                 <span class="tweet-detail">
+                                    <i class="fa-solid fa-retweet ${
+																			tweet.isRetweeted ? "retweeted" : null
+																		}" data-retweet-for="${tweet.uuid}"></i>
                                     ${tweet.retweets}
                                 </span>
                             </div>   
                         </div>            
                     </div>
+                    <div class="hidden" id="replies-${tweet.uuid}">
+                        ${repliesHtml}
+                    </div> 
                 </div>
         `;
 	});
 };
 
-renderTweet(tweetsData)
+renderTweet(tweetsData);
+
+function performEvent(event) {
+	let tweetToLike = event.target.dataset.likeFor;
+    let tweetToRetweet = event.target.dataset.retweetFor;
+    let tweetToComments = event.target.dataset.commentFor;
+
+	if (!tweetToLike && !tweetToRetweet && !tweetToComments) return;
+
+	if (tweetToLike) {
+		const foundTweet = tweetsData.find((tweet) => tweet.uuid === tweetToLike);
+		if (!foundTweet.isLiked) {
+			foundTweet.isLiked = true;
+			foundTweet.likes++;
+		} else {
+			foundTweet.isLiked = false;
+			foundTweet.likes--;
+        }
+
+	    renderTweet(tweetsData);        
+	} else if (tweetToRetweet) {
+		const foundTweet = tweetsData.find(
+			(tweet) => tweet.uuid === tweetToRetweet
+		);
+		if (!foundTweet.isRetweeted) {
+			foundTweet.isRetweeted = true;
+			foundTweet.retweets++;
+		} else {
+			foundTweet.isRetweeted = false;
+			foundTweet.retweets--;
+        }
+	    renderTweet(tweetsData);        
+    } else {
+        document.getElementById(`replies-${tweetToComments}`).classList.toggle("hidden");
+    }
+
+}
+
+function addTweet() {
+    const tweet = tweetInput.value;
+    if (!tweet) return;
+    
+    const newTweet = {
+        uuid: uuidv4(),
+        handle: "@Twimba",
+        profilePic: "images/scrimbalogo.png",
+        likes: 0,
+        retweets: 0,
+        tweetText: tweet,
+        replies: [],
+        isLiked: false,
+        isRetweeted: false
+    }
+    tweetsData.unshift(newTweet);
+    tweetInput.value = "";
+    renderTweet(tweetsData);
+}
+
+
