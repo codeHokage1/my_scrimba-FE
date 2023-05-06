@@ -40,4 +40,4 @@ The following are the projects done:
 - Cookie Consent project
 - Meme Picker
 - Twimba: Twitter clone
-  - Deployed Link: 
+  - Deployed Link: https://twimba-farhan.netlify.app/
