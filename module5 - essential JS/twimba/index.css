@@ -47,7 +47,7 @@ header{
 
 /* textareas + btn */
 
-textarea{
+.new-tweet{
     border: none;
     padding: 10px;
     margin: 0 0 20px 0;
@@ -57,7 +57,44 @@ textarea{
     line-height: 30px;
     resize: none;
 }
-
+.add-reply{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-items: flex-start; */
+    margin: 10px 0 10px 40px;
+}
+.reply-details{
+    display: flex;
+    flex-direction: column;
+    /* width: 160px; */
+    /* align-items: center; */
+    
+}
+.add-reply img{
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 30px;
+}
+.reply-input{
+    resize: none;
+    border: 1px solid lightgray;
+    margin: 10px;
+    font-size: 11pt;
+    padding: 5px ;
+    width: 100%;
+}
+.reply-btn{
+    font-size: 11pt;
+    padding: 10px 15px;
+    width: auto;
+    margin: 0;
+    align-self: flex-end;
+    letter-spacing: 1px;
+}
+.reply-btn:hover{
+    box-shadow: 0 0 4px 3px lightgray;
+}
 button{
     background-color: #1DA1F2;
     border: none;

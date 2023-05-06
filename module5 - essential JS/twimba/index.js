@@ -58,6 +58,13 @@ const renderTweet = (tweets) => {
                         </div>            
                     </div>
                     <div class="hidden" id="replies-${tweet.uuid}">
+                        <div class="add-reply">
+                            <img src="images/scrimbalogo.png" alt="Scrimba logo"/>                                            
+                            <div class="reply-details">
+                                <textarea class="reply-input" id="reply-for-${tweet.uuid}"></textarea>
+                                <button class="reply-btn" data-reply-for="${tweet.uuid}">Reply</button>
+                            </div>                                        
+                        </div>
                         ${repliesHtml}
                     </div> 
                 </div>
@@ -71,8 +78,9 @@ function performEvent(event) {
 	let tweetToLike = event.target.dataset.likeFor;
     let tweetToRetweet = event.target.dataset.retweetFor;
     let tweetToComments = event.target.dataset.commentFor;
+    let tweetToReply = event.target.dataset.replyFor;
 
-	if (!tweetToLike && !tweetToRetweet && !tweetToComments) return;
+	// if (!tweetToLike && !tweetToRetweet && !tweetToComments) return;
 
 	if (tweetToLike) {
 		const foundTweet = tweetsData.find((tweet) => tweet.uuid === tweetToLike);
@@ -97,8 +105,23 @@ function performEvent(event) {
 			foundTweet.retweets--;
         }
 	    renderTweet(tweetsData);        
-    } else {
+    } else if (tweetToComments){
         document.getElementById(`replies-${tweetToComments}`).classList.toggle("hidden");
+    } else if(tweetToReply) {
+        const reply = document.getElementById(`reply-for-${tweetToReply}`);
+        const foundPost = tweetsData.find(post => post.uuid === tweetToReply);
+
+        if (reply.value) {
+            const newReply = {
+                handle: `@Twimba`,
+                profilePic: `images/scrimbalogo.png`,
+                tweetText: reply.value
+            }
+            foundPost.replies.unshift(newReply);
+            reply.value = '';
+            renderTweet(tweetsData)
+            document.getElementById(`replies-${tweetToReply}`).classList.remove("hidden");
+        }
     }
 
 }
