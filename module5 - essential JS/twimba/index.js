@@ -55,6 +55,9 @@ const renderTweet = (tweets) => {
 																		}" data-retweet-for="${tweet.uuid}"></i>
                                     ${tweet.retweets}
                                 </span>
+                                <span class="tweet-detail trash">
+                                    <i class="fa-solid fa-trash" data-delete-for="${tweet.uuid}"></i>
+                                </span>
                             </div>   
                         </div>            
                     </div>
@@ -80,6 +83,7 @@ function performEvent(event) {
     let tweetToRetweet = event.target.dataset.retweetFor;
     let tweetToComments = event.target.dataset.commentFor;
     let tweetToReply = event.target.dataset.replyFor;
+    let tweetToDelete = event.target.dataset.deleteFor;
 
 	// if (!tweetToLike && !tweetToRetweet && !tweetToComments) return;
 
@@ -123,6 +127,11 @@ function performEvent(event) {
             renderTweet(tweetsData)
             document.getElementById(`replies-${tweetToReply}`).classList.remove("hidden");
         }
+    } else if (tweetToDelete) {
+        const foundPost = tweetsData.find(post => post.uuid === tweetToDelete);
+        tweetsData = tweetsData.filter(tweets => tweets.uuid !== foundPost.uuid);
+        renderTweet(tweetsData)
+        
     }
     localStorage.setItem('tweets', JSON.stringify(tweetsData));
 

@@ -19,7 +19,14 @@ i{
 .fa-solid{
     color: #999;
 }
+.fa-trash{
 
+    opacity: 0.5;
+}
+.fa-trash:hover{
+    opacity: 1;
+    color: red;
+}
 .liked{
     color: red;
 }
@@ -125,10 +132,14 @@ button{
 .tweet-details{
     display: flex;
     font-size: 13px;
-    justify-content: space-between;
-    width: 160px;
-}
+    /* justify-content: space-between; */
+    gap: 20px;
+    width: 100%;
 
+}
+.trash{
+    margin-left: auto;
+}
 .tweet-detail{
     display: flex;
     gap: 4px;
