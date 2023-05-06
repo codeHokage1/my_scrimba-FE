@@ -1,10 +1,11 @@
-import { tweetsData } from "./data.js";
+import { tweetsData as remoteTweets } from "./data.js";
 
 const tweetBtn = document.querySelector("#tweet-btn");
 const tweetInput = document.querySelector("#tweet-input");
 
 const feed = document.querySelector("#feed");
 
+let tweetsData = JSON.parse(localStorage.getItem('tweets')) || remoteTweets;
 
 document.addEventListener("click", performEvent);
 tweetBtn.addEventListener("click", addTweet);
@@ -123,6 +124,7 @@ function performEvent(event) {
             document.getElementById(`replies-${tweetToReply}`).classList.remove("hidden");
         }
     }
+    localStorage.setItem('tweets', JSON.stringify(tweetsData));
 
 }
 
