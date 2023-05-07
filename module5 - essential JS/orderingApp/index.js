@@ -1,6 +1,7 @@
 import { menuArray } from './data.js';
 
 const menu = document.querySelector(".menu");
+const checkoutDetails = document.querySelector(".checkout-details");
 
 const renderMenu = () => {
    menu.innerHTML = '';
@@ -21,8 +22,7 @@ const renderMenu = () => {
             </div>
 
             <div class="order-btn-box">
-               <button class="order-btn">+</button>
-               
+               <button class="order-btn" data-add="${item.id}">+</button>
             </div>
          </div>
       `
@@ -32,3 +32,51 @@ const renderMenu = () => {
 
 renderMenu();
 
+let cart = [];
+
+const renderCheckout = () => {
+   if (cart.length) {
+      document.querySelector(".checkout").classList.remove('hidden');
+      console.log(cart);
+
+      checkoutDetails.innerHTML = '';
+      for (let item of cart) {
+         let checkoutItem = `
+            <div class="checkout-item">
+               <p class="checkout-item-name">${item.name}</p>
+               <p class="remove" data-remove="${item.id}">remove</p>
+               <p class="checkout-item-price">$${item.price} <span class="quantity">X ${item.quantity}</span> = $${item.price * item.quantity}</p>
+            </div
+         `
+         checkoutDetails.innerHTML += checkoutItem;
+      }
+   } else {
+      document.querySelector(".checkout").classList.add('hidden');
+   }
+   
+}
+
+document.addEventListener("click", (e) => {
+   const addItem = e.target.dataset.add;
+   const deleteItem = e.target.dataset.remove;
+
+   if (addItem) {
+      const foundItem = menuArray.find((item) => item.id === Number(addItem));
+      const foundInCart = cart.find(item => item.id === foundItem.id)
+      if (foundInCart) {
+         foundInCart.quantity++;
+      } else {
+         const newCartItem = {
+            id: foundItem.id,
+            name: foundItem.name,
+            price: foundItem.price,
+            quantity: 1
+         }
+         cart.push(newCartItem);
+      }
+      renderCheckout();
+   } else if (deleteItem) {
+      cart = cart.filter((item) => item.id !== Number(deleteItem));
+      renderCheckout();
+   }
+})

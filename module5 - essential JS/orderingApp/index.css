@@ -7,6 +7,7 @@ body {
 .container {
 	width: 600px;
 	margin: 50px auto;
+    padding-bottom: 30px;
 }
 header {
 	background: url("images/burger-bg.png");
@@ -73,4 +74,65 @@ p {
 }
 .order-btn:hover {
     background-color: #dedede;
+}
+
+.checkout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.checkout h3{
+    text-align: center;
+    font-size: 28pt;
+}
+.checkout-details{
+    width: 100%;
+}
+.checkout-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.checkout-item-name{
+    font-size: 18pt;
+    font-weight: bolder;
+}
+.checkout-item-price{
+    margin-left: auto;
+    font-weight: bolder;
+}
+.remove{
+    color: lightgray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11pt;
+}
+.remove:hover{
+    color: red;
+    cursor: pointer;
+}
+.quantity{
+    font-weight: lighter;
+}
+.checkout-btn{
+    background-color: #16DB99;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    font-weight: bolder;
+    padding: 20px 0;
+    cursor: pointer;
+    margin-bottom: 40px;
+    width: 100%;
+}
+.checkout-btn:hover{
+    background-color: #0EBF85;
+}
+.hidden{
+    display: none;
 }
