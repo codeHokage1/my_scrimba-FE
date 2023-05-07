@@ -5,6 +5,13 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="index.css" />
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,19 +32,30 @@
 			</header>
 
 			<main>
-                <section class="menu">
+				<section class="menu"></section>
 
-                </section>
-
-                <section class="checkout hidden">
-                    <h3>Your Order</h3>
-                    <div class="checkout-details">
-
-                    </div>
-                    <button class="checkout-btn">Complete Order</button>
-                </section>
-            </main>
+				<section class="checkout hidden">
+					<h3>Your Order</h3>
+					<div class="checkout-details"></div>
+					<button class="checkout-btn" id="complete-order">Complete Order</button>
+				</section>
+			</main>
 		</div>
+		<div class="payment-modal hidden">
+			<div class="payment-header">
+				<span>
+					<i class="fa-solid fa-arrow-left" id="back-to-shop"></i>
+				</span>
+				<h3 class="payment-title">Enter card details</h3>
+			</div>
+			<form action="">
+				<input type="text" placeholder="Enter your name" required>
+				<input type="number" placeholder="Enter card number" required>
+				<input type="password" placeholder="Enter your CVV" required>
+				<button id="pay">Pay</button>
+			</form>
+		</div>
+
 		<script src="index.js" type="module"></script>
 	</body>
 </html>

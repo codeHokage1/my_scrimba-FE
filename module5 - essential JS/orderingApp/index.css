@@ -2,6 +2,11 @@ body {
 	margin: 0;
 	background-color: lightgray;
 	font-family: "Smythe", cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
@@ -147,6 +152,60 @@ header p {
 .checkout-btn:hover{
     background-color: #0EBF85;
 }
+
+
+.payment-modal{
+    padding: 50px;
+    background-color: white;
+    position: fixed;
+    width: 400px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0px 0px 10px 5px lightgray;
+}
+.payment-header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.fa-arrow-left{
+    font-size: 20pt;
+    cursor: pointer;
+}
+.fa-arrow-left:hover{
+    color: #16DB99;
+}
+.payment-title{
+    margin: 0 auto;
+}
+form{
+    width: 100%;
+    margin: 0;
+}
+.payment-modal input{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+#pay{
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #16DB99;
+    padding: 10px 0;
+    font-size: 16pt;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#pay:hover{
+    background-color: #0EBF85;
+}
+
+
 .hidden{
     display: none;
 }

@@ -69,6 +69,14 @@ document.addEventListener("click", (e) => {
    const addItem = e.target.dataset.add;
    const deleteItem = e.target.dataset.remove;
 
+   if (e.target.id === "complete-order") {
+      document.querySelector(".payment-modal").classList.remove('hidden');
+   }
+   if (e.target.id === "back-to-shop") {
+      document.querySelector(".payment-modal").classList.add('hidden');
+   }
+
+
    if (addItem) {
       const foundItem = menuArray.find((item) => item.id === Number(addItem));
       const foundInCart = cart.find(item => item.id === foundItem.id)
