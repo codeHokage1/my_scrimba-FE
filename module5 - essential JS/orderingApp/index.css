@@ -27,7 +27,7 @@ h1 {
 	font-weight: normal;
 	margin-bottom: 5px;
 }
-p {
+header p {
 	font-size: 14pt;
 	letter-spacing: 1pt;
 }
@@ -103,6 +103,7 @@ p {
 .checkout-item-price{
     margin-left: auto;
     font-weight: bolder;
+    font-size: 18pt;
 }
 .remove{
     color: lightgray;
@@ -115,6 +116,19 @@ p {
 }
 .quantity{
     font-weight: lighter;
+}
+.total{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    border-top: 2px solid black;
+    margin-bottom: 30px;
+    font-size: 24pt;
+}
+.total-price{
+    margin-left: auto;
+    font-weight: bolder;
 }
 .checkout-btn{
     background-color: #16DB99;

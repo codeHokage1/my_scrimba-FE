@@ -50,6 +50,15 @@ const renderCheckout = () => {
          `
          checkoutDetails.innerHTML += checkoutItem;
       }
+      let total = `
+         <div class="total">
+            <p>Total price:<p>
+            <p class="total-price">
+               $${cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}
+            </p>
+         </div>
+      `
+      checkoutDetails.innerHTML += total;
    } else {
       document.querySelector(".checkout").classList.add('hidden');
    }
