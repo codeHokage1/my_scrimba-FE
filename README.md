@@ -41,3 +41,5 @@ The following are the projects done:
 - Meme Picker
 - Twimba: Twitter clone
   - Deployed Link: https://twimba-farhan.netlify.app/
+- Jimmy Diner's
+  - Deployed Link: https://jimmy-diner.netlify.app/
