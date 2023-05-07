@@ -1,0 +1,76 @@
+body {
+	margin: 0;
+	background-color: lightgray;
+	font-family: "Smythe", cursive;
+}
+
+.container {
+	width: 600px;
+	margin: 50px auto;
+}
+header {
+	background: url("images/burger-bg.png");
+	background-size: cover;
+	padding: 40px 40px;
+	color: white;
+}
+main {
+	background-color: #f5f5f5;
+}
+h1,
+p {
+	margin: 0;
+}
+h1 {
+	font-size: 32pt;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+p {
+	font-size: 14pt;
+	letter-spacing: 1pt;
+}
+
+.order {
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	padding: 20px 40px;
+	border-bottom: 1px solid #e0e0e0;
+	gap: 20px;
+}
+.order-logo {
+	font-size: 80px;
+}
+.order-details p {
+	font-size: 16pt;
+	font-weight: 100;
+}
+.order-name, .order-price {
+	font-weight: bold;
+	margin: 0;
+}
+.order-name {
+	font-size: 18pt;
+	margin-bottom: 5px;
+}
+.order-btn-box {
+	margin-left: auto;
+}
+.order-btn {
+    font-weight: bolder;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 24pt;
+    color: #3c3c3c;
+    border: 1px solid #dedede;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+.order-btn:hover {
+    background-color: #dedede;
+}
