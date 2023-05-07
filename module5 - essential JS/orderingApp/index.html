@@ -31,13 +31,16 @@
 				<p class="motto">The best burgers and pizzas in town</p>
 			</header>
 
-			<main>
+			<main class="main">
 				<section class="menu"></section>
 
 				<section class="checkout hidden">
 					<h3>Your Order</h3>
 					<div class="checkout-details"></div>
 					<button class="checkout-btn" id="complete-order">Complete Order</button>
+				</section>
+
+				<section class="payment-done hidden">
 				</section>
 			</main>
 		</div>
@@ -48,10 +51,10 @@
 				</span>
 				<h3 class="payment-title">Enter card details</h3>
 			</div>
-			<form action="">
-				<input type="text" placeholder="Enter your name" required>
-				<input type="number" placeholder="Enter card number" required>
-				<input type="password" placeholder="Enter your CVV" required>
+			<form action="" class="payment-form">
+				<input type="text" name="name" placeholder="Enter your name" required>
+				<input type="number" name="card-number" placeholder="Enter card number" required>
+				<input type="password" name="cvv" placeholder="Enter your CVV" required>
 				<button id="pay">Pay</button>
 			</form>
 		</div>
