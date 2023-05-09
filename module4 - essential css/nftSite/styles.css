@@ -3,21 +3,19 @@ body {
 	margin: 0;
    font-family: 'Roboto', sans-serif;
 }
-/* color: #d0aaff;
-   color: whitesmoke; */
 header {
 	background-color: #5f29a3;
-	padding: 30px 100px;
+	padding: 30px 0;
 }
 
 header h1 {
-	font-size: 30pt;
+	font-size: 2.5rem;
 	margin: 0;
 	color: whitesmoke;
 	margin-bottom: 15px;
 }
 header h3 {
-	font-size: 14pt;
+	font-size: 1.17rem;
 	margin: 0;
 	color: #d0aaff;
 }
@@ -26,13 +24,17 @@ h2{
    margin: 0;
 }
 section{
-   padding: 50px 100px;
+   padding: 50px 0;
    /* width: 900px; */
    margin: 0 auto;
    color: #2b283a;
 }
+.container{
+   max-width: 80%;
+   margin: 0 auto;
+}
 section h2{
-   font-size: 20pt;
+   font-size: 1.67rem;
    margin-bottom: 30px;
 }
 section img{
@@ -40,7 +42,7 @@ section img{
    /* height: auto; */
 }
 section p{
-   font-size: 14pt;
+   font-size: 1.17rem;
    line-height: 1.5;
 }
 a{
@@ -58,10 +60,12 @@ a:hover{
 .image-container{
    display: flex;
    justify-content: space-between;
+   /* gap: 20px; */
 }
 .image-container img{
-   width: 500px;
-   min-width: 150px;
+   /* width: 500px; */
+   width: 48%;
+   /* min-width: 150px; */
    border-radius: 10px;
 }
 .link{
@@ -89,7 +93,18 @@ a:hover{
 }
 
 footer{
-   font-size: 14pt;
+   font-size: 1.17rem;
    color: #5f29a3;
    text-align: center;
 }
+
+@media screen and (max-width: 500px){
+   .image-container{
+      flex-direction: column; 
+   }
+   .image-container img{
+      width: 100%;
+      margin-bottom: 20px;
+   }
+}
+   
