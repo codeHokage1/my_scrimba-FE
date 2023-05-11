@@ -74,6 +74,7 @@ a:hover{
    font-weight: bold;
    display: inline-block;
    margin: 0;
+   text-align: center;    
 }
 .buy{
    background-color: #5f29a3;
@@ -105,6 +106,12 @@ footer{
    .image-container img{
       width: 100%;
       margin-bottom: 20px;
+   }
+   .link{
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;  
    }
 }
    
