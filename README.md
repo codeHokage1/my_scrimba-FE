@@ -43,3 +43,7 @@ The following are the projects done:
   - Deployed Link: https://twimba-farhan.netlify.app/
 - Jimmy Diner's
   - Deployed Link: https://jimmy-diner.netlify.app/
+
+### Module 6 - Responsiveness
+- NFT Site: revamped it
+  - Deployed Link: https://nft-fy.netlify.app/
