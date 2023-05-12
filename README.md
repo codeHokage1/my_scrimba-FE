@@ -47,3 +47,5 @@ The following are the projects done:
 ### Module 6 - Responsiveness
 - NFT Site: revamped it
   - Deployed Link: https://nft-fy.netlify.app/
+- Scrimbify
+  - Deployed Link: https://scrimbify.netlify.app/ 
