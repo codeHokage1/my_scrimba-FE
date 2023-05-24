@@ -4,6 +4,7 @@ import {
 	ref,
 	push,
 	onValue,
+	remove,
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 const appSetting = {
@@ -20,16 +21,26 @@ const addBtn = document.querySelector("#add-button");
 const itemsList = document.querySelector(".itemsList");
 
 const fetchItems = async () => {
-   itemsList.innerHTML = "";
+	itemsList.innerHTML = "";
 	await onValue(itemsInCart, function (snapshot) {
-		let dbItems = Object.values(snapshot.val());
-		let items = ''
+		if (!snapshot.val()) {
+			itemsList.innerHTML = "";
+			return;
+		}
+		let dbItems = Object.entries(snapshot.val());
+		itemsList.innerHTML = "";
 		dbItems.forEach((item) => {
-			items += `<li>${item}</li>`;
-      });
-      itemsList.innerHTML = items;
-   });
-
+			// items += `<li>${item}</li>`;
+			let listItem = document.createElement("li");
+			listItem.innerText = item[1];
+			itemsList.append(listItem);
+			listItem.addEventListener("dblclick", () => {
+				let exactItem = ref(db, `itemsInCart/${item[0]}`);
+				remove(exactItem);
+				console.log(`${item[0]} removed`);
+			});
+		});
+	});
 };
 fetchItems();
 

@@ -67,3 +67,7 @@ ul li {
 	flex-grow: 1;
 	text-align: center;
 }
+ul li:hover{
+	background-color: rgb(235, 83, 83);
+	color: white;
+}
