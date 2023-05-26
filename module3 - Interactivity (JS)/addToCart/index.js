@@ -23,8 +23,8 @@ const itemsList = document.querySelector(".itemsList");
 const fetchItems = async () => {
 	itemsList.innerHTML = "";
 	await onValue(itemsInCart, function (snapshot) {
-		if (!snapshot.val()) {
-			itemsList.innerHTML = "";
+		if (!snapshot.exists()) {
+			itemsList.innerHTML = "No items here... yet";
 			return;
 		}
 		let dbItems = Object.entries(snapshot.val());
