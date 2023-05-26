@@ -27,6 +27,9 @@ The following are the projects done:
 - Leads Tracker (Chrome Extension)
 - Units Converter
 - Emoji Personality
+- Add To Cart
+  - Progressive Web App
+  - Deployed Link: https://add2cart-farhan.netlify.app/
 
 ### Module 4 - Essential CSS Concepts
 
