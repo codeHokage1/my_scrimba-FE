@@ -39,11 +39,32 @@ textarea{
     font-size: 1.2rem;
     line-height: 1.5;
 }
+.toAndFro{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 15px;
+}
+.from, .to{
+    width: 40px;
+    flex-grow: 1;
+    border: 0;
+    border-radius: 8px;
+    background-color: #444059;
+    color: #8F8F8F;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+}
+
 .publish{
     border: none;
     outline: none;
     display: block;
-    margin: 10px auto;
+    margin: 0 auto 10px;
     background-color: #28A9F1;
     font-weight: 700;
     font-size: 1.5rem;
@@ -75,6 +96,12 @@ h2{
     padding: 10px 15px;
     text-align: left;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.endorsement p, .endorsement h3{
+    margin: 0;
 }
 .endorsement p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
