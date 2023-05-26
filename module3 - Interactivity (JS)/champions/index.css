@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,700;1,400&display=swap');
+*{
+    box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+	background-color: #1b1924;
+
+}
+main {
+	max-width: 390px;
+	margin: 0 auto;
+    text-align: center;
+    padding: 3em 2em;
+    /* border: 1px solid red; */
+}
+.logo {
+	width: 90px;
+	margin: 0 auto;
+}
+h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+textarea{
+    resize: none;
+    border: none;
+    border-radius: 8px;
+    background-color: #444059;
+    color: #8F8F8F;
+    font-family: inherit;
+    font-weight: 700;
+    padding: 1em;
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.publish{
+    border: none;
+    outline: none;
+    display: block;
+    margin: 10px auto;
+    background-color: #28A9F1;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 15px 0;
+    width: 100%;
+    border-radius: 8px;
+}
+.publish:hover{
+    background-color: #1E8ACF;
+    color: white;
+}
+
+.endorsements-container{
+    margin-top: 2em;
+    width: 100%;
+}
+h2{
+    font-weight: 700;
+    color: white;
+    font-size: 1.5rem;
+}
+.endorsements{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.endorsement{
+    background-color: white;
+    padding: 10px 15px;
+    text-align: left;
+    width: 100%;
+}
+.endorsement p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 500;
+}
