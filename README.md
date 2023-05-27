@@ -30,6 +30,9 @@ The following are the projects done:
 - Add To Cart
   - Progressive Web App
   - Deployed Link: https://add2cart-farhan.netlify.app/
+- Champion
+  - Progressive Web App
+  - Deployed Link: https://champion-farhan.netlify.app/
 
 ### Module 4 - Essential CSS Concepts
 
