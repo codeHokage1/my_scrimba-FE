@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+*{
+    box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+p, h3{
+    margin: 0;
+}
+header {
+    width: 100%;
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    color: #090909;
+}
+.logo{
+    width: 24px;
+} 
+h1{
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -1.1px;
+    font-family: 'Roboto', sans-serif;
+}
+header ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+    gap: 20px;
+	align-items: center;
+    letter-spacing: -1px;
+}
+ul a{
+    text-decoration: none;
+    color: black;
+}
+ul li{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+ul li:hover{
+    border-bottom: 2px solid;
+    cursor: pointer;
+}
+.hero {
+	background-image: url("../images/article-image-hero.png");
+	background-size: cover;
+    background-position: center;
+	color: white;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 80px 20px 30px;
+}
+.date{
+    font-size: 0.8rem;
+}
+h2{
+    font-size: 2rem;
+    margin: 0;
+}
+.info{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+.articles {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 20px;
+}
+article img{
+    width: 100%;
+}
+.article-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.article-date{
+    font-size: 14px;
+}
+.article-title{
+    font-size: 24px;
+
+}
+.article-info{
+    font-size: 16px;
+    line-height: 1.2;
+}
+.view-more{
+    font-size: 1.2rem;
+    align-self: center;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 700;
+}
+.view-more:hover{
+    text-decoration: none;
+}
+
+
+footer {
+	text-align: center;
+	padding: 20px 0;
+	background-color: #202020;
+    color: #ececec;
+    font-size: 0.8rem;
+    margin-top: 2em;
+}
+.copy {
+	color: #d7d7d7;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 700px){
+    header{
+        padding: 20px 50px;
+    }
+    header ul{
+        gap: 30px;
+    }
+    header ul li{
+        font-size: 1.1rem;
+    }
+    .hero{
+        height: 488px;
+        padding: 0 50px 50px;
+
+    }
+    h2{
+        font-size: 3rem;
+    }
+    .info{
+        max-width: 70%;
+        font-size: 1.3rem;
+    }
+    .articles{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .view-more{
+        grid-column: 1/-1;
+        text-align: center;
+        margin-top: 30px;
+    }
+}
