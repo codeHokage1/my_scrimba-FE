@@ -55,3 +55,5 @@ The following are the projects done:
   - Deployed Link: https://nft-fy.netlify.app/
 - Scrimbify
   - Deployed Link: https://scrimbify.netlify.app/ 
+- Learning Journal
+  - Deployed Link: https://learning-journal-farhan.netlify.app/
