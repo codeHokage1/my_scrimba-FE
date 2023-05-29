@@ -132,6 +132,10 @@ footer {
     margin-top: 5px;
 }
 
+.hidden{
+    display: none;
+}
+
 /* Styling for article.html */
 .article-h2{
     text-align: center;
