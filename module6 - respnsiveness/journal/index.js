@@ -1,5 +1,8 @@
 const viewMore = document.querySelector('.view-more');
-const allHidden = document.querySelectorAll('.hidden')
+const allHidden = document.querySelectorAll('.hidden');
+
+const hamburger = document.querySelector('.menu-logo');
+const nav = document.querySelector('.mobile');
 
 viewMore.addEventListener('click', () => {
    allHidden.forEach(post => {
@@ -10,4 +13,8 @@ viewMore.addEventListener('click', () => {
    } else {
       viewMore.textContent = 'View More'
    }
+});
+
+hamburger.addEventListener('click', () => {
+   nav.classList.toggle('mobile')
 })

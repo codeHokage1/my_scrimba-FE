@@ -14,11 +14,17 @@ p, h3{
 header {
     width: 100%;
 	display: flex;
-	align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     padding: 10px 15px;
-    color: #090909;
+    color: #090909
 }
+.menu-logo{
+    width: 40px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
 .logo{
     width: 24px;
 } 
@@ -36,9 +42,11 @@ header ul {
 	padding: 0;
 	margin: 0;
 	display: flex;
-    gap: 20px;
+    flex-direction: column;
+    /* gap: 20px; */
 	align-items: center;
     letter-spacing: -1px;
+    background-color: lightgrey;
 }
 ul a{
     text-decoration: none;
@@ -46,11 +54,19 @@ ul a{
 }
 ul li{
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid white;
 }
 ul li:hover{
     border-bottom: 2px solid;
     cursor: pointer;
+}
+.mobile{
+    display: none;
+    /* transition-delay: 3s; */
 }
 .hero {
 	background-image: url("../images/article-image-hero.png");
@@ -192,13 +208,25 @@ footer {
 @media screen and (min-width: 700px){
     header{
         padding: 20px 50px;
+        flex-direction: row;
+	    align-items: center;
+    }
+    .mobile{
+        display: flex;
     }
     header ul{
         gap: 30px;
+        flex-direction: row;
+        background-color: inherit;
     }
     header ul li{
         font-size: 1.1rem;
+        width: auto;
     }
+    .menu-logo{
+        display: none;
+    }
+    
     .hero{
         height: 488px;
         padding: 0 50px 50px;
