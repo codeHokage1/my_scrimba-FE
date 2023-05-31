@@ -39,4 +39,4 @@ The following are the projects done:
 ### Module 6 - Responsiveness
 - NFT Site: revamped it : <a href="https://nft-fy.netlify.app/" target="_blank">Deployed Link</a> 
 - Scrimbify: <a href="https://scrimbify.netlify.app/" target="_blank">Deployed Link</a> 
-- Learning Journal: <a href="https://learning-journal-farhan.netlify.app/" target='_blank'>Deployed Link</a> 
+- Learning Journal: <a href="https://learning-journal-farhan.netlify.app/" target="_blank">Deployed Link</a> 
