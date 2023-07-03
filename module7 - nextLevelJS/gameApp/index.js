@@ -1,49 +1,63 @@
-function Character(data) {
-	Object.assign(this, data);
-	this.generateHTML = function () {
-		document.getElementById(this.id).innerHTML = `
-      <div class="character-card">
-        <h4 class="name"> ${this.name} </h4>
-        <img class="avatar" src="${this.avatar}"/>
-        <p class="health">health: <b> ${this.health} </b></p>
-        <div class="dice-container">${this.diceRoll
-					.map((dice) => `<div class="dice"> ${dice} </div>`)
-					.join("")}</div>
-      </div>`;
-	};
-	this.rollDice = function () {
-      this.diceRoll = new Array(this.diceCount).fill(0).map(() => Math.ceil(Math.random() * 6));
-      this.generateHTML()
-   };
-}
-const data1 = {
-	id: "hero",
-	name: "Wizard",
-	avatar: "images/wizard.png",
-	health: 60,
-	diceRoll: [],
-	diceCount: 3,
+import { characterData } from "./data.js";
+import { Character } from "./Character.js";
+
+const wizard = new Character(characterData.hero);
+const orc = new Character(characterData.monster);
+
+const render = () => {
+	document.getElementById("hero").innerHTML = wizard.generateHTML();
+	document.getElementById("monster").innerHTML = orc.generateHTML();
 };
-
-const data2 = {
-	id: "monster",
-	name: "Orc",
-	avatar: "images/orc.png",
-	health: 10,
-	diceRoll: [],
-	diceCount: 1,
-};
-
-const hero = new Character(data1);
-const monster = new Character(data2);
-
-
-hero.generateHTML();
-monster.generateHTML();
+render();
 
 function attack() {
-	hero.rollDice();
-	monster.rollDice();
+	wizard.rollDice();
+	let wizardScore = wizard.diceRoll.reduce((acc, curr) => acc + curr, 0);
+	orc.rollDice();
+	let orcScore = orc.diceRoll.reduce((acc, curr) => acc + curr, 0);
+	const wizardPercentage = getRemainingHealth(orcScore, wizard.health);
+	const orcPercentage = getRemainingHealth(wizardScore, orc.health);
+	console.log("Wizard Current Percentage: ", 100 - wizardPercentage);
+	console.log("Orc Current Percentage: ", 100 - orcPercentage);
+
+	wizard.health -= orcScore;
+	orc.health -= wizardScore;
+	
+	if (orc.health <= 0) {
+		orc.health = 0;
+	}
+	if (wizard.health <= 0) {
+		wizard.health = 0;
+	}
+
+	if (wizard.health === 0 || orc.health === 0) {
+		const message = endGame()[0];
+		console.log(message)
+		const emoji = endGame()[1];
+		document.body.innerHTML = `
+			<div class="end-game">
+				<h2>Game Over</h2>
+				<h3>${message}</h3>
+				<p class="end-emoji">${emoji}</p>
+			<div>
+		`
+		return;
+	}
+	render();
 }
 
 document.getElementById("attack-button").addEventListener("click", attack);
+
+const getRemainingHealth = (currentHealth, maxHealth) => {
+	const remainingHealth = currentHealth / maxHealth * 100;
+	return remainingHealth;
+}
+
+function endGame() {
+	return wizard.health === 0 && orc.health === 0
+		? ["No victors - all creatures are dead", "☠️"]
+		: wizard.health > 0
+		? ["The Wizard Wins", "🔮"]
+		: ["The Orc is Victorious", "☠️"];
+}
+

@@ -1,0 +1,56 @@
+*{
+   box-sizing: border-box;
+}
+
+body{
+   max-width: 500px;
+}
+h2, p{
+   margin: 0;
+}
+
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: .5em;
+   margin-bottom: .5em;
+
+}
+header img{
+   width: 30px;
+   display: inline-block;
+}
+.logo{
+   width: 70px;
+}
+
+.details{
+   position: relative;
+}
+.details img{
+   width: 100%;
+   border-radius: 15px;
+}
+.info{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   color: white;
+   margin: 1em;
+}
+.info h2{
+   margin-bottom: .2em;
+}
+
+.actions{
+   display: flex;
+   justify-content: center;
+   gap: 2em;
+   margin: 1em;
+}
+.actions img{
+   border-radius: 50%;
+   padding: 1em;
+   border: 1px solid black;
+}
