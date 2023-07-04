@@ -27,8 +27,11 @@ function displayDog(dogData) {
 
    dogProfile.innerHTML = dogHTML;
 }
-displayDog(dogs[2])
+
+let item = 0;
+displayDog(dogs[item])
 console.log(dogs)
+
 
 function likeProfile(dog) {
    dog.hasBeenLiked = !dog.hasBeenLiked;
@@ -46,6 +49,13 @@ document.querySelector(".like-profile").addEventListener("click", (e) => {
    const likedDog = e.target.classList.value.split(' ')[1];
    const foundDog = dogs.find(dog => dog.name === likedDog);
    likeProfile(foundDog);
+   setTimeout(() => {
+      item++;
+      if (item > dogs.length - 1) {
+         item = 0;
+      }
+      displayDog(dogs[item])
+   }, 2000)
    console.log(dogs)
 })
 
@@ -53,5 +63,12 @@ document.querySelector(".cross-profile").addEventListener("click", (e) => {
    const swipedDog = e.target.classList.value.split(' ')[1];
    const foundDog = dogs.find(dog => dog.name === swipedDog);
    crossProfile(foundDog);
+   setTimeout(() => {
+      item++;
+      if (item > dogs.length - 1) {
+         item = 0;
+      }
+      displayDog(dogs[item])
+   }, 2000)
    console.log(dogs)
 })
