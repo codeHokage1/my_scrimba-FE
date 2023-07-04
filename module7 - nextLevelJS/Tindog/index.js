@@ -10,11 +10,14 @@ function displayDog(dogData) {
          <img
             src="./images/dog-${(newDog.name).toLowerCase()}.jpg"
             alt="Picture of ${newDog.name}"
+            class="dog-pic"
          />
          <div class="info">
             <h2>${newDog.name}, ${newDog.age}</h2>
             <p>${newDog.bio}</p>
          </div>
+         <img src="./images/badge-like.png" alt="Liked badge" class="badge liked-badge hidden" />
+         <img src="./images/badge-nope.png" alt="Crossed badge" class="badge crossed-badge hidden" />
       </div>
       <div class="actions">
          <img class="cross-profile ${newDog.name}" src="./images/icon-cross.png" alt="Cross Icon" />
@@ -24,17 +27,19 @@ function displayDog(dogData) {
 
    dogProfile.innerHTML = dogHTML;
 }
-displayDog(dogs[0])
+displayDog(dogs[2])
 console.log(dogs)
 
 function likeProfile(dog) {
    dog.hasBeenLiked = !dog.hasBeenLiked;
    console.log(dog.hasBeenLiked);
+   document.querySelector('.liked-badge').classList.toggle('hidden');
 }
 
 function crossProfile(dog) {
    dog.hasBeenSwiped = !dog.hasBeenSwiped;
    console.log(dog.hasBeenSwiped);
+   document.querySelector('.crossed-badge').classList.toggle('hidden');
 }
 
 document.querySelector(".like-profile").addEventListener("click", (e) => {

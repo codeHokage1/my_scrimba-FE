@@ -1,56 +1,77 @@
-*{
-   box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
 
-body{
-   max-width: 500px;
+body {
+	max-width: 500px;
 }
-h2, p{
-   margin: 0;
-}
-
-header{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: .5em;
-   margin-bottom: .5em;
-
-}
-header img{
-   width: 30px;
-   display: inline-block;
-}
-.logo{
-   width: 70px;
+h2,
+p {
+	margin: 0;
 }
 
-.details{
-   position: relative;
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em;
+	margin-bottom: 0.5em;
 }
-.details img{
-   width: 100%;
-   border-radius: 15px;
+header img {
+	width: 30px;
+	display: inline-block;
 }
-.info{
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   color: white;
-   margin: 1em;
-}
-.info h2{
-   margin-bottom: .2em;
+.logo {
+	width: 70px;
 }
 
-.actions{
-   display: flex;
-   justify-content: center;
-   gap: 2em;
-   margin: 1em;
+.details {
+	position: relative;
+	padding: .2em;
 }
-.actions img{
-   border-radius: 50%;
-   padding: 1em;
-   border: 1px solid black;
+.dog-pic {
+	width: 100%;
+	border-radius: 15px;
+}
+.info {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: white;
+	margin: 1em;
+}
+.info h2 {
+	margin-bottom: 0.2em;
+}
+.badge {
+	position: absolute;
+	top: 50px;
+	width: 150px;
+	left: 30px;
+	transform: rotate(-30deg);
+	flex-shrink: 0;
+}
+.hidden {
+	display: none;
+}
+
+.actions {
+	display: flex;
+	justify-content: center;
+	gap: 2em;
+	margin: 1em;
+}
+.actions img {
+	border-radius: 91.871px;
+	padding: 1em;
+	box-shadow: 0px 10px 20px 0px rgb(236, 232, 232);
+	cursor: pointer;
+}
+.like-profile:hover {
+	background: #dbfff4;
+	box-shadow: 0px 10px 20px 0px #ccf1e6;
+}
+.cross-profile:hover {
+	background: #ffe7ef;
+	box-shadow: 0px 10px 20px 0px #edd9df;
 }
