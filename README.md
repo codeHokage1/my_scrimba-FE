@@ -40,5 +40,3 @@ The following are the projects done:
 - NFT Site: revamped it : <a href="https://nft-fy.netlify.app/" target="_blank">Deployed Link</a> 
 - Scrimbify: <a href="https://scrimbify.netlify.app/" target="_blank">Deployed Link</a> 
 - Learning Journal: <a href="https://learning-journal-farhan.netlify.app/" target="_blank">Deployed Link</a> 
-- <a href="https://learning-journal-farhan.netlify.app/" target="_blank" rel="noopener">Deployed Link 2</a> 
-
